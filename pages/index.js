@@ -1,13 +1,14 @@
 import { Contract, providers, utils } from "ethers";
 import Head from "next/head";
+import styles from "../styles/Home.module.css";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
-import styles from "../styles/Home.module.css";
+
 
 
 export default function Home() {
-  // walletConnected keep track of whether the user's wallet is connected or not
+  // walletConnected keep track of whether the user's wallet is connected or not and test
   const [walletConnected, setWalletConnected] = useState(false);
   // loading is set to true when we are waiting for a transaction to get mined
   const [loading, setLoading] = useState(false);
